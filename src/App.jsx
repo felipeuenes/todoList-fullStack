@@ -2,6 +2,7 @@ import add from './assets/add.png'
 import list from './assets/list.png'
 import './App.css'
 import { Prioridades } from './components/Prioridades'
+import { Lista } from './components/Lista'
 
 function App() {
 
@@ -25,8 +26,8 @@ function App() {
               <img src={add} alt="add" />
           </button>
     </div>
-<Prioridades/>
-   
+    <Prioridades/>
+    <Lista/>
       </div>
     </div>
     </>

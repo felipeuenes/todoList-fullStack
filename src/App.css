@@ -3,7 +3,7 @@
   height: 100vh;
   background-image: url('./assets/fundp.jpg');
   background-size: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 
   background-repeat: no-repeat;
 }
