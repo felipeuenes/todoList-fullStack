@@ -7,7 +7,7 @@ export function Lista(props) {
     return(
         <div className='lista'>
             <section><p>A realizar:</p></section>
-                <Tarefa texto={props.tarefa}/>
+                <Tarefa texto={props.tarefa.tarefa}/>
                 <Tarefa/>
 
                 

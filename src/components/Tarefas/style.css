@@ -6,3 +6,12 @@
     border-radius: 1.0rem;
     background: #3D1C4B;
 }
+
+.tarefa h2{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
