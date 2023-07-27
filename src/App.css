@@ -1,0 +1,40 @@
+.geral{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/fundp.jpg');
+  background-size: 100%;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 70.0rem;
+  height: 100vh;
+  flex-shrink: 0;
+  margin: 0 auto;
+  margin-top: 6.0rem;
+  border-radius: 20px;
+  background: #140F16;
+}
+
+#titulo{
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 5.0rem;
+}
+#titulo img{
+  width: 3.7rem;
+}
+#titulo h1{
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 3.0rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
