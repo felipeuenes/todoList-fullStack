@@ -1,13 +1,13 @@
 import { Tarefa } from '../Tarefas';
 import './style.css';
 
-export function Lista( {tarefa} ) {
+export function Lista(props) {
 
-    console.log(tarefa);
+    console.log(props.tarefa);
     return(
         <div className='lista'>
             <section><p>A realizar:</p></section>
-                <Tarefa texto={tarefa}/>
+                <Tarefa texto={props.tarefa}/>
                 <Tarefa/>
 
                 

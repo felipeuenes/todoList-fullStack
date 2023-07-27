@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form"
 function App() {
 
   const { register, handleSubmit } = useForm()
-  const [ tarefaDados, setTarefadados] = useState()
+  const [ tarefaDados, setTarefadados] = useState('')
 
   function onSubmit(data) {
         
