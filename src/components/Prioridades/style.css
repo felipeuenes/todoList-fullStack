@@ -1,0 +1,21 @@
+.prioridades{
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.prioridades section{
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+}
+
+h3{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -1,6 +1,7 @@
 import add from './assets/add.png' 
 import list from './assets/list.png'
 import './App.css'
+import { Prioridades } from './components/Prioridades'
 
 function App() {
 
@@ -18,12 +19,14 @@ function App() {
 
           <section id='input'>
             <label htmlFor="tarefa">Tarefa:</label>
-            <input type="text" id='tarefa'/>
+            <input type="text" id='tarefa' placeholder='Digite aqui sua tarefa a ser feita...'/>
           </section>
           <button>
               <img src={add} alt="add" />
           </button>
     </div>
+<Prioridades/>
+   
       </div>
     </div>
     </>
