@@ -78,7 +78,7 @@
 }
 
 #input input:focus{
-  border-color: none;
+  background-color: #1E1821;
 }
 
 #input label{
