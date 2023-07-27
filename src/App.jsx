@@ -6,15 +6,22 @@ import { Lista } from './components/Lista'
 import { useState } from 'react'
 
 import { useForm } from "react-hook-form"
+import axios from 'axios'
 
 function App() {
 
   const { register, handleSubmit } = useForm()
   const [ tarefaDados, setTarefadados] = useState('')
 
+  const API = 'http://localhost:3000/tarefa'
+
   function onSubmit(data) {
         
-
+    axios.post(API, data)
+    .then((res) =>{
+      alert(res.data)
+    }).catch((error) => alert(error.response.data))
+    
     setTarefadados(data);
    
   }
