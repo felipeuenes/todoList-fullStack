@@ -27,6 +27,18 @@ function App() {
    
   }
 
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
   
   return (
     <>
@@ -44,13 +56,13 @@ function App() {
             <label htmlFor="tarefa">Tarefa:</label>
             <input type="text" id='tarefa' placeholder='Digite aqui sua tarefa a ser feita...' {...register('tarefa', {required: true})}/>
           </section>
-          <button>
+          <button onClick={handleModalOpen}>
               <img src={add} alt="add" />
           </button>
     </div>
 
-    {/* <Modal tarefa={tarefaDados}/> */}
-    
+    <Modal tarefa={tarefaDados} isOpen={modalOpen} onClose={handleModalClose}/>
+
      </form>
     <Prioridades/>
     <Lista tarefa={tarefaDados}/>
