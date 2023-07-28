@@ -14,7 +14,6 @@ function App() {
   const { register, handleSubmit } = useForm()
   const [ tarefaDados, setTarefadados] = useState('')
 
-  const API = 'http://localhost:3000/tarefa'
 
   function onSubmit(data) {
         

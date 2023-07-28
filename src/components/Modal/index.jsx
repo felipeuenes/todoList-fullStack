@@ -4,31 +4,27 @@ import { PrioridadesBlack } from '../PrioridadesBlack'
 import './style.css'
 import axios from 'axios';
 
-export function Modal({ tarefa ,isOpen, onClose, children }){
+export function Modal({ tarefa ,isOpen, onClose }){
 
 
     if (!isOpen) return null;
 
-    console.log(tarefa);
-
 
     const API = 'http://localhost:3000/tarefa'
 
-    function buttonSelect(){
-
-        axios.post(API, tarefa)
-        .then((res) => {
-            alert(res.tarefa)
-        }).catch((error) => alert(error.response.data))
-    }
 
     function muitoUrgente() {
-        const prioridade = 'muito urgente';
+        const prioridade = '0';
 
-
-        axios.post(API, tarefa, prioridade)
+        const data = {
+            tarefa,
+            prioridade
+        }
+console.log(data);
+        axios.post(API, data)
         .then((res) => {
-            alert(res.tarefa)
+           
+            alert(res.data)
            
         }).catch((error) => alert(error.response.data));
         
@@ -51,7 +47,7 @@ export function Modal({ tarefa ,isOpen, onClose, children }){
                         <button id='b'></button>
                         <button id='c'></button>
                     </div>
-                    <button onClick={buttonSelect}>selecionar</button>
+                    {/* <button onClick={buttonSelect}>selecionar</button> */}
             </div>
         </div>
     )
