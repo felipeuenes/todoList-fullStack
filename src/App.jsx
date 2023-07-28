@@ -48,7 +48,9 @@ function App() {
               <img src={add} alt="add" />
           </button>
     </div>
-    <Modal/>
+
+    {/* <Modal tarefa={tarefaDados}/> */}
+    
      </form>
     <Prioridades/>
     <Lista tarefa={tarefaDados}/>

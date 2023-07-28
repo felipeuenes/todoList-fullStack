@@ -2,9 +2,16 @@
 import { ButtonColors } from '../ButtonColors'
 import { PrioridadesBlack } from '../PrioridadesBlack'
 import './style.css'
+import axios from 'axios';
+
+export function Modal(props){
+
+    console.log(props.tarefa);
 
 
-export function Modal(){
+    const API = 'http://localhost:3000/tarefa'
+
+    
 
     return(
         <div className='modal'>
