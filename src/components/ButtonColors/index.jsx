@@ -8,7 +8,7 @@ export function ButtonColors(){
             <button id='a'></button>
             <button id='b'></button>
             <button id='c'></button>
-            <button id='d'></button>
+          
             
         </div>
     )

@@ -25,13 +25,9 @@
     border: none;
     border-radius: 1.0rem;
 }
-#d{
-    background-color: #00CC08;
-    border: none;
-    border-radius: 1.0rem;
-}
 
-#a:hover, #b:hover, #c:hover, #d:hover{
+
+#a:hover, #b:hover, #c:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
