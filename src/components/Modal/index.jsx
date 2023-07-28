@@ -1,5 +1,5 @@
 
-import { ButtonColors } from '../ButtonColors'
+
 import { PrioridadesBlack } from '../PrioridadesBlack'
 import './style.css'
 import axios from 'axios';
@@ -22,17 +22,32 @@ export function Modal({ tarefa ,isOpen, onClose, children }){
         }).catch((error) => alert(error.response.data))
     }
 
+    function muitoUrgente() {
+        const prioridade = 'muito urgente';
+
+
+        axios.post(API, tarefa, prioridade)
+        .then((res) => {
+            alert(res.tarefa)
+           
+        }).catch((error) => alert(error.response.data));
+        
+     
+    }
+
+
+
     return(
         <div className='modal'>
             <div className='prioridadesSelect'>
             <button id='x' onClick={onClose}>X</button>
                 <h1>Qual a prioridade que você
                     da para essa tarefa?</h1>
+
                     <PrioridadesBlack />
-                    {/* <ButtonColors/> */}
 
                     <div className='btnColors'>
-                        <button id='a'></button>
+                        <button id='a' onClick={muitoUrgente}></button>
                         <button id='b'></button>
                         <button id='c'></button>
                     </div>
