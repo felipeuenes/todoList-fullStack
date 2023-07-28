@@ -4,17 +4,23 @@ import { PrioridadesBlack } from '../PrioridadesBlack'
 import './style.css'
 import axios from 'axios';
 
-export function Modal({ isOpen, onClose, children }){
+export function Modal({ tarefa ,isOpen, onClose, children }){
 
 
     if (!isOpen) return null;
 
-    
+    console.log(tarefa);
 
 
     const API = 'http://localhost:3000/tarefa'
 
-    
+    function buttonSelect(){
+
+        axios.post(API, tarefa)
+        .then((res) => {
+            alert(res.tarefa)
+        }).catch((error) => alert(error.response.data))
+    }
 
     return(
         <div className='modal'>
@@ -23,7 +29,14 @@ export function Modal({ isOpen, onClose, children }){
                 <h1>Qual a prioridade que você
                     da para essa tarefa?</h1>
                     <PrioridadesBlack />
-                    <ButtonColors/>
+                    {/* <ButtonColors/> */}
+
+                    <div className='btnColors'>
+                        <button id='a'></button>
+                        <button id='b'></button>
+                        <button id='c'></button>
+                    </div>
+                    <button onClick={buttonSelect}>selecionar</button>
             </div>
         </div>
     )

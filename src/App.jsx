@@ -18,10 +18,10 @@ function App() {
 
   function onSubmit(data) {
         
-    axios.post(API, data)
-    .then((res) =>{
-      alert(res.data)
-    }).catch((error) => alert(error.response.data))
+    // axios.post(API, data)
+    // .then((res) =>{
+    //   alert(res.data)
+    // }).catch((error) => alert(error.response.data))
     
     setTarefadados(data);
    
