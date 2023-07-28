@@ -1,0 +1,37 @@
+.btnColors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2.6rem;
+}
+
+.btnColors button{
+    width: 7.0rem;
+    height: 7.0rem;
+}
+
+#a{
+    background-color: #FF0000;
+    border: none;
+    border-radius: 1.0rem;
+}
+#b{
+    background-color: #FAFF00;
+    border: none;
+    border-radius: 1.0rem;
+}
+#c{
+    background-color: #0038FF;
+    border: none;
+    border-radius: 1.0rem;
+}
+#d{
+    background-color: #00CC08;
+    border: none;
+    border-radius: 1.0rem;
+}
+
+#a:hover, #b:hover, #c:hover, #d:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

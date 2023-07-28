@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 import { useForm } from "react-hook-form"
 import axios from 'axios'
+import { Modal } from './components/Modal'
 
 function App() {
 
@@ -25,9 +26,8 @@ function App() {
     setTarefadados(data);
    
   }
-  
- 
 
+  
   return (
     <>
     <div className='geral'>
@@ -48,6 +48,7 @@ function App() {
               <img src={add} alt="add" />
           </button>
     </div>
+    <Modal/>
      </form>
     <Prioridades/>
     <Lista tarefa={tarefaDados}/>
