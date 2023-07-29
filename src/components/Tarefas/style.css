@@ -5,6 +5,15 @@
     margin-top: 1.0rem;
     border-radius: 1.0rem;
     background: #3D1C4B;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 1.0rem;
+    cursor: pointer;
+}
+.tarefa:hover{
+    background: #32133f;
 }
 
 .tarefa h2{
@@ -14,4 +23,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.tarefa section{
+    
+    margin-left: 1.6rem;
 }

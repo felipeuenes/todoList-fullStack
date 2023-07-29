@@ -14,20 +14,50 @@ export function Modal({ tarefa, isOpen, onClose }){
 
 
     function muitoUrgente() {
-        const prioridade = '0';
+        const prioridade = '#FF0000';
 
         const dados = {
             tarefa: tarefa.tarefa,
             prioridade
         }
-
-        // const dadosSting = JSON.stringify(dados);
-
         console.log(dados);
         axios.post(API, dados)
         .then((res) => {
             alert(JSON.stringify(res.data.message))
             onClose()
+            window.location.reload()
+        }).catch((error) => alert(error.data));
+     
+    }
+    function urgente() {
+        const prioridade = '#FAFF00';
+
+        const dados = {
+            tarefa: tarefa.tarefa,
+            prioridade
+        }
+        console.log(dados);
+        axios.post(API, dados)
+        .then((res) => {
+            alert(JSON.stringify(res.data.message))
+            onClose()
+            window.location.reload()
+        }).catch((error) => alert(error.data));
+     
+    }
+    function poucoUrgente() {
+        const prioridade = '#0038FF';
+
+        const dados = {
+            tarefa: tarefa.tarefa,
+            prioridade
+        }
+        console.log(dados);
+        axios.post(API, dados)
+        .then((res) => {
+            alert(JSON.stringify(res.data.message))
+            onClose()
+            window.location.reload()
         }).catch((error) => alert(error.data));
      
     }
@@ -45,8 +75,8 @@ export function Modal({ tarefa, isOpen, onClose }){
 
                     <div className='btnColors'>
                         <button id='a' onClick={muitoUrgente}></button>
-                        <button id='b'></button>
-                        <button id='c'></button>
+                        <button id='b' onClick={urgente}></button>
+                        <button id='c' onClick={poucoUrgente}></button>
                     </div>
                     {/* <button onClick={buttonSelect}>selecionar</button> */}
             </div>
