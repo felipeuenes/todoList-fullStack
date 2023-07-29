@@ -55,7 +55,11 @@ import axios from 'axios';
                     mostrarBotoes &&  (
                         <div className="botoes">
                           <button id='ok'><img src={ok} alt="ok" /></button>
-                          <button id='trash'><img src={trash} alt="delete" onClick={((item) => deleteTarefa(item.id))}/></button>
+                          <button id='trash'>
+                            <img src={trash}
+                            alt="delete"
+                            onClick={((item) => deleteTarefa(item.id))}/>
+                            </button>
                         </div>)
                   }
         </div>
