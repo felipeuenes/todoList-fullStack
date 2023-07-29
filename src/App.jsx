@@ -23,7 +23,6 @@ function App() {
     // }).catch((error) => alert(error.response.data))
     
     setTarefadados(data);
-   
   }
 
 

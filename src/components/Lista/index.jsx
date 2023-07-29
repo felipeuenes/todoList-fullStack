@@ -5,12 +5,11 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 export function Lista(props) {
+  console.log(props.tarefa);
 
-    console.log(props.tarefa);
-
-    const API = 'http://localhost:3000/'
+  const API = 'http://localhost:3000/'
  
- const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -34,20 +33,19 @@ export function Lista(props) {
   if (loading) {
     return <Loading/>;
   }
-
-  
-
-    return(
-        
-        <div className='lista'>
-            <section><p>A realizar:</p></section>
-                
-                {data.map((item) => (
-          <Tarefa key={item.id} texto={item.tarefa} prioridade={item.prioridade}>{item.tarefa}</Tarefa>
-        ))}
-               
-
-                
-        </div>
-    )
+  return(
+    <div className='lista'>
+      <section><p>A realizar:</p></section>      
+        {data.map((item) => (
+          <Tarefa 
+            key={item.id}
+            item={item} 
+            texto={item.tarefa} 
+            prioridade={item.prioridade}
+          >
+            {item.tarefa}
+          </Tarefa>
+        ))}      
+    </div>
+  )
 }
