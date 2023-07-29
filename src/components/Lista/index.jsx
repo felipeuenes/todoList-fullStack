@@ -1,3 +1,4 @@
+import { Loading } from '../Loading';
 import { Tarefa } from '../Tarefas';
 import './style.css';
 import axios from 'axios';
@@ -30,8 +31,10 @@ export function Lista(props) {
   }, []);
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <Loading/>;
   }
+
+  
 
     return(
         

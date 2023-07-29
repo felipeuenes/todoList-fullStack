@@ -4,7 +4,6 @@
   background-image: url('./assets/fundp.jpg');
   background-size: 100%;
   overflow-x: hidden;
-
   background-repeat: no-repeat;
 }
 
@@ -17,6 +16,7 @@
   margin-top: 6.0rem;
   border-radius: 1.2rem;
   background: #140F16;
+  padding-bottom: 1.6rem;
 }
 
 #titulo{
@@ -46,7 +46,7 @@
   gap: 1.0rem;
   justify-content: center;
   align-items: center;
-
+  
  
 }
 .designInput button{
@@ -55,6 +55,7 @@
   margin-top: 12.0rem;
   border-radius: .8rem;
   background-color: white;
+  cursor: pointer;
 }
 .designInput button img{
   height: 2.0rem;

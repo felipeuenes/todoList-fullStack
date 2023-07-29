@@ -12,6 +12,7 @@
     gap: 1.0rem;
     cursor: pointer;
 }
+
 .tarefa:hover{
     background: #32133f;
 }
@@ -28,4 +29,27 @@
 .tarefa section{
     
     margin-left: 1.6rem;
+}
+
+
+.botoes{
+    display: flex;
+    text-align: end;
+    justify-content: end;
+    width: 50%;
+    gap: 1.0rem;
+    
+}
+
+
+.botoes button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#trash img{
+    width: 1.6rem;
+    height: 1.6rem;
 }
