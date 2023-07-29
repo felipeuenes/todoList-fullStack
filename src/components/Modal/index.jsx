@@ -17,14 +17,18 @@ export function Modal({ tarefa, isOpen, onClose }){
         const prioridade = '0';
 
         const dados = {
-            tarefa,
+            tarefa: tarefa.tarefa,
             prioridade
         }
+
+        // const dadosSting = JSON.stringify(dados);
+
         console.log(dados);
         axios.post(API, dados)
         .then((res) => {
-            alert(res.data)
-        }).catch((error) => alert(error.response.data));
+            alert(JSON.stringify(res.data.message))
+            onClose()
+        }).catch((error) => alert(error.data));
      
     }
 
