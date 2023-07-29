@@ -34,8 +34,8 @@ import axios from 'axios';
         function deleteTarefa(id){
             
             axios.delete(APIdelete + `${id}`)
-            .then(response => {
-                alert('Post excluído:', response.data);
+            .then(res => {
+                alert('Post excluído:', res.data);
             })
             .catch(error => {
                 console.error('Erro ao fazer a requisição:', error);
@@ -55,7 +55,7 @@ import axios from 'axios';
                     mostrarBotoes &&  (
                         <div className="botoes">
                           <button id='ok'><img src={ok} alt="ok" /></button>
-                          <button id='trash'><img src={trash} alt="delete" onClick={deleteTarefa(() => deleteTarefa(item.id))}/></button>
+                          <button id='trash'><img src={trash} alt="delete" onClick={((item) => deleteTarefa(item.id))}/></button>
                         </div>)
                   }
         </div>
