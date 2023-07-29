@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
   background-image: url('./assets/fundp.jpg');
-  background-size: 100%;
+ 
+  background-size: cover;
   overflow-x: hidden;
   background-repeat: no-repeat;
 }
