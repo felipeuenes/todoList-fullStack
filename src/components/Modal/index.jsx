@@ -4,7 +4,7 @@ import { PrioridadesBlack } from '../PrioridadesBlack'
 import './style.css'
 import axios from 'axios';
 
-export function Modal({ tarefa ,isOpen, onClose }){
+export function Modal({ tarefa, isOpen, onClose }){
 
 
     if (!isOpen) return null;
@@ -16,18 +16,15 @@ export function Modal({ tarefa ,isOpen, onClose }){
     function muitoUrgente() {
         const prioridade = '0';
 
-        const data = {
+        const dados = {
             tarefa,
             prioridade
         }
-console.log(data);
-        axios.post(API, data)
+        console.log(dados);
+        axios.post(API, dados)
         .then((res) => {
-           
             alert(res.data)
-           
         }).catch((error) => alert(error.response.data));
-        
      
     }
 
