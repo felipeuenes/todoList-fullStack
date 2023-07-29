@@ -4,6 +4,7 @@ import trash from '../../assets/trash.png'
 import ok from '../../assets/ok.png'
 
 import { useState } from 'react';
+import axios from 'axios';
 
  export function Tarefa({texto, prioridade}){
     
@@ -15,10 +16,32 @@ import { useState } from 'react';
 
         const [botaoAtivo, setBotaoAtivo] = useState(null);
 
-  const handleClickBotao = (botao) => {
-    setBotaoAtivo(botao);
-  };
+        const handleClickBotao = (botao) => {
+            setBotaoAtivo(botao);
+        };
 
+        const API =  "http://localhost:3000/"
+
+        axios.get(API)
+        .then(response => {
+            console.log(response.data);
+        }).catch(error => {
+            console.error('Erro ao fazer a requisição:', error);
+          });
+    
+          const APIdelete = 'http://localhost:3000/tarefa/'
+
+        function deleteTarefa(id){
+            
+            axios.delete(APIdelete + `${id}`)
+            .then(response => {
+                alert('Post excluído:', response.data);
+            })
+            .catch(error => {
+                console.error('Erro ao fazer a requisição:', error);
+            });
+
+        }
     return(
         <div className='tarefa' onClick={toggleBotoes}>
             <section>
@@ -32,7 +55,7 @@ import { useState } from 'react';
                     mostrarBotoes &&  (
                         <div className="botoes">
                           <button id='ok'><img src={ok} alt="ok" /></button>
-                          <button id='trash'><img src={trash} alt="delete" /></button>
+                          <button id='trash'><img src={trash} alt="delete" onClick={deleteTarefa(() => deleteTarefa(item.id))}/></button>
                         </div>)
                   }
         </div>

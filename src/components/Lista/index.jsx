@@ -18,6 +18,7 @@ export function Lista(props) {
     const fetchData = async () => {
       try {
         const response = await axios.get(API);
+      
         setData(response.data);
         setLoading(false);
       } catch (error) {
