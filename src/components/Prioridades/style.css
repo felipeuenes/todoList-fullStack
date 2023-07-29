@@ -23,3 +23,21 @@ h2{
     font-weight: 600;
     line-height: normal;
 }
+
+@media screen and (max-width: 700px) {
+    h2{
+        font-size: .8rem;
+    }
+    .svg{
+        width: 1.0rem;
+        height: 1.0rem;
+    }
+    .prioridades{
+        justify-content: center;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .prioridades section{
+        gap: 0;
+    }
+}

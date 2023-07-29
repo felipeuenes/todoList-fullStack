@@ -18,3 +18,9 @@
     line-height: normal;
     padding: 2.0rem;
 }
+
+@media screen and (max-width: 700px) {
+    .lista{
+        width: 30.0rem;
+    }
+}

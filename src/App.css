@@ -20,6 +20,12 @@
   padding-bottom: 1.6rem;
 }
 
+
+@media screen and (max-width: 700px) {
+  .container{
+    width: 30.0rem;
+  }
+}
 #titulo{
   display: flex;
   flex-direction: row;
@@ -32,6 +38,8 @@
 #titulo img{
   width: 3.7rem;
 }
+
+
 #titulo h1{
   color: #FFF;
   font-family: Montserrat;
@@ -39,6 +47,19 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+
+@media screen and (max-width: 700px) {
+  #titulo img{
+    width: 2.7rem;
+  }
+  #titulo h1{
+    font-size: 2.5rem;
+  }
+  #titulo{
+    gap: .9rem;
+  }
 }
 
 .designInput{
@@ -80,6 +101,8 @@
   padding: .8rem;
 }
 
+
+
 #input input:focus{
   background-color: #1E1821;
 }
@@ -87,8 +110,20 @@
 #input label{
   color: #FFF;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+
+@media screen and (max-width: 700px) {
+  #input input{
+    width: 20.0rem;
+    font-size: 1.2rem;
+  }
+  #input label{
+    font-size: 1.4rem;
+  }
+  
 }
