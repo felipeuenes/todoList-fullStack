@@ -35,21 +35,25 @@
 .botoes{
     display: flex;
     text-align: end;
-    justify-content: end;
     width: 50%;
-    gap: 1.0rem;
-    
+    gap: .5rem;
 }
 
 
 .botoes button{
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.0rem;
+    height: 2.0rem;
+    cursor: pointer;
 }
 
 #trash img{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+#ok img{
     width: 1.6rem;
     height: 1.6rem;
 }

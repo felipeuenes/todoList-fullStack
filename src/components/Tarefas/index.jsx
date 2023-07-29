@@ -1,6 +1,7 @@
 import './style.css';
 
 import trash from '../../assets/trash.png'
+import ok from '../../assets/ok.png'
 
 import { useState } from 'react';
 
@@ -30,7 +31,7 @@ import { useState } from 'react';
                   {
                     mostrarBotoes &&  (
                         <div className="botoes">
-                          <button></button>
+                          <button id='ok'><img src={ok} alt="ok" /></button>
                           <button id='trash'><img src={trash} alt="delete" /></button>
                         </div>)
                   }
