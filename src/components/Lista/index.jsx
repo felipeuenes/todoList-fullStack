@@ -45,7 +45,8 @@ export function Lista(props) {
           >
             {item.tarefa}
           </Tarefa>
-        ))}      
+        ))}
+        <section><p>Realizados:</p></section>
     </div>
   )
 }
