@@ -44,6 +44,12 @@ import axios from 'axios';
         console.error('Erro ao fazer a requisição:', error);
       });
     }
+
+
+   
+
+
+
     return(
         <div className='tarefa' onClick={toggleBotoes}>
           <section>
@@ -56,7 +62,10 @@ import axios from 'axios';
           {
             mostrarBotoes &&  (
             <div className="botoes">
-              <button id='ok'><img src={ok} alt="ok" /></button>
+              <button
+              id='ok'
+              >
+                <img src={ok} alt="ok" /></button>
               <button id='trash'>
                 <img src={trash}
                   alt="delete"

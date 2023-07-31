@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 export function Lista(props) {
   console.log(props.tarefa);
-
+  
   const API = 'http://localhost:3000/'
  
   const [data, setData] = useState([]);
