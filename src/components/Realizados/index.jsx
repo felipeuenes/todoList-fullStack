@@ -1,15 +1,15 @@
 import './style.css';
 
 import trash from '../../assets/trash.png'
-import ok from '../../assets/ok.png'
+
 
 import { useState } from 'react';
 import axios from 'axios';
 
- export function Tarefa({ texto, prioridade, item, dado }){
+ export function Realizados({ txt, priorit, item }){
 
     console.log(item);
-    console.log(texto);
+    console.log(txt);
 
     const [mostrarBotoes, setMostrarBotoes] = useState(false);
       
@@ -27,18 +27,9 @@ import axios from 'axios';
           console.error('Erro ao fazer a requisição:', error);
         });
     
-    const APIrealizado = 'http://localhost:3000/concluir/:id' 
+    
 
-    function realizado(id){
-      axios.post(APIrealizado + `${id}`)
-      .then(res => {
-        alert(`${id} foi com sucesso`)
-        console.log(res);
-        window.location.reload(true)
-      }).catch(error => {
-        console.error('erro ao fazer get', error);
-      })
-    }
+   
 
     const APIdelete = 'http://localhost:3000/tarefa/'
 
@@ -65,19 +56,15 @@ import axios from 'axios';
         <div className='tarefa' onClick={toggleBotoes}>
           <section>
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 21 21" fill="none">
-            <circle cx="10.5" cy="10.5" r="10.5" fill={prioridade}/>
+            <circle cx="10.5" cy="10.5" r="10.5" fill={priorit}/>
             </svg>
           </section>
 
-          <h2>{texto}</h2>
+          <h2>{txt}</h2>
           {
             mostrarBotoes &&  (
             <div className="botoes">
-              <button
-              id='ok'
-              onClick={() => realizado(dado.id)}
-              >
-                <img src={ok} alt="ok" /></button>
+              
               <button id='trash'>
                 <img src={trash}
                   alt="delete"
