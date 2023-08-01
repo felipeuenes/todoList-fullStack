@@ -11,8 +11,8 @@ export function Lista(props) {
   const API = 'http://localhost:3000/'
   const APIrealizados = 'http://localhost:3000/concluidos/'
  
-  const [dataRealizado, setDataRealizado] = useState([])
   const [data, setData] = useState([]);
+  const [dataRealizado, setDataRealizado] = useState([])
   const [loading, setLoading] = useState(true);
 
   
@@ -24,9 +24,9 @@ export function Lista(props) {
     try {
      
       const resRealizado = await axios.get(APIrealizados);
-      console.log(resRealizado.data);
       
       setDataRealizado(resRealizado.data)
+      console.log(resRealizado.data);
   
       setLoading(false);
     } catch (error) {
@@ -72,6 +72,7 @@ export function Lista(props) {
       <section><p>A realizar:</p></section>      
         {data.map((item) => (
           <Tarefa 
+          
             key={item.id}
             item={item} 
             texto={item.tarefa} 
@@ -83,8 +84,8 @@ export function Lista(props) {
         <section><p>Realizados:</p></section>
         {dataRealizado.map((item) => {
           <Realizados
+          item={item}
           key={item.id}
-          dado={item}
           txt={item.tarefa}
           priorit={item.prioridade}
           >

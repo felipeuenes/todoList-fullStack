@@ -27,18 +27,7 @@ import axios from 'axios';
           console.error('Erro ao fazer a requisição:', error);
         });
     
-    const APIrealizado = 'http://localhost:3000/concluir/:id' 
-
-    function realizado(id){
-      axios.post(APIrealizado + `${id}`)
-      .then(res => {
-        alert(`${id} foi com sucesso`)
-        console.log(res);
-        window.location.reload(true)
-      }).catch(error => {
-        console.error('erro ao fazer get', error);
-      })
-    }
+    
 
     const APIdelete = 'http://localhost:3000/tarefa/'
 
