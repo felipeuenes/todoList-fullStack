@@ -6,7 +6,7 @@ import ok from '../../assets/ok.png'
 import { useState } from 'react';
 import axios from 'axios';
 
- export function Tarefa({ texto, prioridade, item }){
+ export function Tarefa({ texto, prioridade, item, dado }){
 
     console.log(item);
 
@@ -16,12 +16,7 @@ import axios from 'axios';
         setMostrarBotoes(!mostrarBotoes);
     };
 
-    const [botaoAtivo, setBotaoAtivo] = useState(null);
-
-    const handleClickBotao = (botao) => {
-        setBotaoAtivo(botao);
-    };
-
+  
     const API =  "http://localhost:3000/"
 
     axios.get(API)
@@ -31,7 +26,22 @@ import axios from 'axios';
           console.error('Erro ao fazer a requisição:', error);
         });
     
+    const APIrealizado = 'http://localhost:3000/concluir/:id' 
+
+    function realizado(id){
+      axios.post(APIrealizado + `${id}`)
+      .then(res => {
+        alert(`${id} foi com sucesso`)
+        console.log(res);
+        window.location.reload(true)
+      }).catch(error => {
+        console.error('erro ao fazer get', error);
+      })
+    }
+
     const APIdelete = 'http://localhost:3000/tarefa/'
+
+        
 
     function deleteTarefa(id){   
       axios.delete(APIdelete + `${id}`)
@@ -64,6 +74,7 @@ import axios from 'axios';
             <div className="botoes">
               <button
               id='ok'
+              onClick={() => realizado(dado.idconcluidos)}
               >
                 <img src={ok} alt="ok" /></button>
               <button id='trash'>

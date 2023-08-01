@@ -8,7 +8,9 @@ export function Lista(props) {
   console.log(props.tarefa);
   
   const API = 'http://localhost:3000/'
+  const APIrealizados = 'http://localhost:3000/concluidos/'
  
+  const [dataRealizado, setDataRealizado] = useState([])
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -17,7 +19,9 @@ export function Lista(props) {
     const fetchData = async () => {
       try {
         const response = await axios.get(API);
-      
+        const resRealizado = await axios.get(APIrealizados);
+        console.log(resRealizado);
+        setDataRealizado(resRealizado.data)
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -47,6 +51,16 @@ export function Lista(props) {
           </Tarefa>
         ))}
         <section><p>Realizados:</p></section>
+        {dataRealizado.map((dado) => {
+          <Tarefa
+          key={dado.id}
+          item={dado}
+          texto={dado.tarefa}
+          prioridade={dado.prioridade}
+          >
+            {dado.tarefa}
+          </Tarefa>
+        })}
     </div>
   )
 }
