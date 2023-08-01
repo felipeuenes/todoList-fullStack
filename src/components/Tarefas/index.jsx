@@ -74,7 +74,7 @@ import axios from 'axios';
             <div className="botoes">
               <button
               id='ok'
-              onClick={() => realizado(dado.idconcluidos)}
+              onClick={() => realizado(dado.id)}
               >
                 <img src={ok} alt="ok" /></button>
               <button id='trash'>
