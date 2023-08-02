@@ -8,8 +8,8 @@ import axios from 'axios';
 
  export function Tarefa({ texto, prioridade, item, dado }){
 
-    console.log(item);
-    console.log(texto);
+    // console.log(item);
+    // console.log(texto);
 
     const [mostrarBotoes, setMostrarBotoes] = useState(false);
       
@@ -27,11 +27,26 @@ import axios from 'axios';
           console.error('Erro ao fazer a requisição:', error);
         });
     
-    
+        
+        const APIrealizados = 'http://localhost:3000/concluir/'
+        
+        function realizado(id){
+          console.log(id);
+          return(
+            axios.post(APIrealizados, + `${id}`)
+            .then(res => {
+              console.log(res);
+              console.log(id);
+              alert('tarefa realizada com sucesso!')
+            }).catch(error => {
+              console.error('deu errado', error);
+            })
+          )
+        }
+
 
     const APIdelete = 'http://localhost:3000/tarefa/'
 
-        
 
     function deleteTarefa(id){   
       axios.delete(APIdelete + `${id}`)
@@ -64,7 +79,7 @@ import axios from 'axios';
             <div className="botoes">
               <button
               id='ok'
-              onClick={() => realizado(dado.id)}
+              onClick={() => realizado(item.idtarefas)}
               >
                 <img src={ok} alt="ok" /></button>
               <button id='trash'>

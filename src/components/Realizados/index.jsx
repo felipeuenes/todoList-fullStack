@@ -22,7 +22,7 @@ import axios from 'axios';
 
     axios.get(API)
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
       }).catch(error => {
           console.error('Erro ao fazer a requisição:', error);
         });
@@ -39,7 +39,7 @@ import axios from 'axios';
       axios.delete(APIdelete + `${id}`)
       .then(res => {
         alert(`Post ${id} foi excluído com sucesso`);
-        console.log(res)
+        // console.log(res)
         window.location.reload(true);
       })
       .catch(error => {

@@ -83,16 +83,16 @@ export function Lista(props) {
         ))}
         <section><p>Realizados:</p></section>
         {dataRealizado.map((item) => {
-          <Realizados
+          return <Realizados
           item={item}
-          key={item.id}
+          key={item.idrealizados}
           txt={item.tarefa}
           priorit={item.prioridade}
           >
             {item.tarefa}
           </Realizados>
         })}
-<Realizados/>
+
         
     </div>
   )
