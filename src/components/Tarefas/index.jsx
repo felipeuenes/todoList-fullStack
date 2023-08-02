@@ -38,8 +38,7 @@ import axios from 'axios';
             .then(res => {
               console.log(JSON.stringify(res.data.message))
               
-              console.log(res);
-              console.log(id);
+              deleteTarefa(id)
               window.location.reload()
               alert('tarefa realizada com sucesso!')
             }).catch(error => {

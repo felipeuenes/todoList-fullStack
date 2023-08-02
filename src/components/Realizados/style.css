@@ -63,3 +63,23 @@
         font-size: 1.6rem;
     }
 }
+
+/* 
+.texto-com-risco{
+    text-decoration: line-through;
+    text-decoration-color: green;
+} */
+
+.texto-com-risco {
+    position: relative;
+  }
+  
+  .texto-com-risco::after {
+    content: ''; /* Cria um elemento pseudo para simular o risco */
+    position: absolute;
+    left: 0;
+    bottom: 38%; /* Posição do risco (ajuste conforme necessário) */
+    width: 100%;
+    height: 0.4rem; /* Altura do risco (ajuste conforme necessário) */
+    background-color: green; /* Cor do risco (ajuste conforme necessário) */
+  }

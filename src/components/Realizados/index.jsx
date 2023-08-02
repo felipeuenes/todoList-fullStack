@@ -32,12 +32,12 @@ import axios from 'axios';
 
    
 
-    const APIdelete = 'http://localhost:3000/tarefa/'
+    const APIdelete = 'http://localhost:3000/concluidos/del/'
 
         
 
     function deleteTarefa(id){   
-      axios.delete(APIdelete + `${id}`)
+      axios.delete(APIdelete + id)
       .then(res => {
         alert(`Post ${id} foi excluído com sucesso`);
         // console.log(res)
@@ -57,11 +57,11 @@ import axios from 'axios';
         <div className='tarefa' onClick={toggleBotoes}>
           <section>
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 21 21" fill="none">
-            <circle cx="10.5" cy="10.5" r="10.5" fill={priorit}/>
+            <circle cx="10.5" cy="10.5" r="10.5" fill='#00CC08'/>
             </svg>
           </section>
 
-          <h2>{txt}</h2>
+          <h2 className='texto-com-risco'>{txt}</h2>
           {
             mostrarBotoes &&  (
             <div className="botoes">
@@ -69,7 +69,7 @@ import axios from 'axios';
               <button id='trash'>
                 <img src={trash}
                   alt="delete"
-                  onClick={() => deleteTarefa(item.idtarefas)}/>
+                  onClick={() => deleteTarefa(item.idconcluidos)}/>
               </button>
             </div>)
             }
