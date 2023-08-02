@@ -29,14 +29,18 @@ import axios from 'axios';
     
         
         const APIrealizados = 'http://localhost:3000/concluir/'
+
         
         function realizado(id){
           console.log(id);
           return(
-            axios.post(APIrealizados, + `${id}`)
+            axios.post(APIrealizados + id)
             .then(res => {
+              console.log(JSON.stringify(res.data.message))
+              
               console.log(res);
               console.log(id);
+              window.location.reload()
               alert('tarefa realizada com sucesso!')
             }).catch(error => {
               console.error('deu errado', error);

@@ -22,6 +22,7 @@ import axios from 'axios';
 
     axios.get(API)
       .then(response => {
+        
         // console.log(response.data);
       }).catch(error => {
           console.error('Erro ao fazer a requisição:', error);
