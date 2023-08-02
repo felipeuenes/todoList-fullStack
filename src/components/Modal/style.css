@@ -11,6 +11,8 @@
     align-items: center;
 }
 
+
+
 .prioridadesSelect{
     width: 50.0rem;
     height: 30.0rem;
@@ -84,4 +86,22 @@
 #a:hover, #b:hover, #c:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+
+    .prioridadesSelect{
+       width: 30.0rem;
+    }
+    .prioridadesSelect h1{
+        width: 25.0rem;
+        font-size: 1.4rem;
+    }
+
+    #x{
+        font-size: 1.8rem;
+    }
 }
