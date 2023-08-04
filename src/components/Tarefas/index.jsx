@@ -17,6 +17,24 @@ import axios from 'axios';
         setMostrarBotoes(!mostrarBotoes);
     };
 
+
+
+    const APIdelete = 'https://todolist-api-2811.onrender.com/tarefa/'
+
+
+    function deleteTarefa(id){   
+      axios.delete(APIdelete + `${id}`)
+      .then(res => {
+        // alert(`Post ${id} foi excluído com sucesso`);
+        console.log(res)
+        window.location.reload(true);
+      })
+      .catch(error => {
+        console.error('Erro ao fazer a requisição:', error);
+      });
+    }
+
+
   
     const API =  "https://todolist-api-2811.onrender.com/"
 
@@ -48,21 +66,7 @@ import axios from 'axios';
         }
 
 
-    const APIdelete = 'https://todolist-api-2811.onrender.com/tarefa/'
-
-
-    function deleteTarefa(id){   
-      axios.delete(APIdelete + `${id}`)
-      .then(res => {
-        // alert(`Post ${id} foi excluído com sucesso`);
-        console.log(res)
-        window.location.reload(true);
-      })
-      .catch(error => {
-        console.error('Erro ao fazer a requisição:', error);
-      });
-    }
-
+   
 
    
 
