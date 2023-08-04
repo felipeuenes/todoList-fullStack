@@ -57,7 +57,7 @@ import axios from 'axios';
               console.log(JSON.stringify(res.data.message))
               
               deleteTarefa(id)
-              window.location.reload()
+              // window.location.reload()
               // alert('tarefa realizada com sucesso!')
             }).catch(error => {
               console.error('deu errado', error);
