@@ -10,7 +10,7 @@ export function Modal({ tarefa, isOpen, onClose }){
     if (!isOpen) return null;
 
 
-    const API = 'http://localhost:3000/tarefa'
+    const API = 'https://todolist-api-2811.onrender.com/tarefa'
 
 
     function muitoUrgente() {
