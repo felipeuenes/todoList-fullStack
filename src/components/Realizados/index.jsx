@@ -18,7 +18,7 @@ import axios from 'axios';
     };
 
   
-    const API =  "http://localhost:3000/"
+    const API =  "https://todolist-api-2811.onrender.com/"
 
     axios.get(API)
       .then(response => {
@@ -32,14 +32,14 @@ import axios from 'axios';
 
    
 
-    const APIdelete = 'http://localhost:3000/concluidos/del/'
+    const APIdelete = 'https://todolist-api-2811.onrender.com/concluidos/del/'
 
         
 
     function deleteTarefa(id){   
       axios.delete(APIdelete + id)
       .then(res => {
-        alert(`Post ${id} foi excluído com sucesso`);
+        // alert(`Post ${id} foi excluído com sucesso`);
         // console.log(res)
         window.location.reload(true);
       })

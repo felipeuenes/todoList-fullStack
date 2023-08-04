@@ -18,7 +18,7 @@ import axios from 'axios';
     };
 
   
-    const API =  "http://localhost:3000/"
+    const API =  "https://todolist-api-2811.onrender.com/"
 
     axios.get(API)
       .then(response => {
@@ -28,7 +28,7 @@ import axios from 'axios';
         });
     
         
-        const APIrealizados = 'http://localhost:3000/concluir/'
+        const APIrealizados = 'https://todolist-api-2811.onrender.com/concluir/'
 
         
         function realizado(id){
@@ -40,7 +40,7 @@ import axios from 'axios';
               
               deleteTarefa(id)
               window.location.reload()
-              alert('tarefa realizada com sucesso!')
+              // alert('tarefa realizada com sucesso!')
             }).catch(error => {
               console.error('deu errado', error);
             })
@@ -48,13 +48,13 @@ import axios from 'axios';
         }
 
 
-    const APIdelete = 'http://localhost:3000/tarefa/'
+    const APIdelete = 'https://todolist-api-2811.onrender.com/tarefa/'
 
 
     function deleteTarefa(id){   
       axios.delete(APIdelete + `${id}`)
       .then(res => {
-        alert(`Post ${id} foi excluído com sucesso`);
+        // alert(`Post ${id} foi excluído com sucesso`);
         console.log(res)
         window.location.reload(true);
       })

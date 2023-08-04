@@ -40,7 +40,7 @@ export function Modal({ tarefa, isOpen, onClose }){
         console.log(dados);
         axios.post(API, dados)
         .then((res) => {
-            alert(JSON.stringify(res.data.message))
+            // alert(JSON.stringify(res.data.message))
             onClose()
             window.location.reload()
         }).catch((error) => alert(error.data));
@@ -56,7 +56,7 @@ export function Modal({ tarefa, isOpen, onClose }){
         console.log(dados);
         axios.post(API, dados)
         .then((res) => {
-            alert(JSON.stringify(res.data.message))
+            // alert(JSON.stringify(res.data.message))
             onClose()
             window.location.reload()
         }).catch((error) => alert(error.data));

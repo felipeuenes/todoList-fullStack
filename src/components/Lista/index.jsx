@@ -8,8 +8,8 @@ import { useState, useEffect } from 'react';
 export function Lista(props) {
   console.log(props.tarefa);
   
-  const API = 'http://localhost:3000/'
-  const APIrealizados = 'http://localhost:3000/concluidos/'
+  const API = 'https://todolist-api-2811.onrender.com/'
+  const APIrealizados = 'https://todolist-api-2811.onrender.com/concluidos/'
  
   const [data, setData] = useState([]);
   const [dataRealizado, setDataRealizado] = useState([])
